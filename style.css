@@ -13,6 +13,7 @@ button{
 
 .header__menu{
     height: inherit;
+    width: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,13 +64,15 @@ button{
 }
 
 button{
-    height: 40px;
-    width: 250px;
+    height: 4em;
+    width: 15em;
     border-radius: 5px;
     border: none;
     background-color: #F05E2D;
     color: white;
     margin-top: 20px;
+    font-size: 1.2em;
+    outline: none;
 }
 
 .footer{
@@ -82,23 +85,91 @@ button{
     color: white;
     font-size: 20px;
     text-align: center;
+    padding-bottom: 1em;
 }
 
-@media screen and (max-width: 600px){
-    .book__imgContainer{
-        width: 80%;
+/*mobile first*/
+
+@media screen and (min-width: 320px){
+    .header__link{
+        font-size: 0.8em;
+    }
+
+    .title{
+        font-size: 1.5em;
+        padding: 0 4%;
     }
 
     .book{
-        flex-direction: column;
-        align-items: center;
+        display: block;
     }
 
-    .book__order{
-        margin-bottom: 20px;
+    .book__imgContainer{
+        width: 80%;
+        margin: auto;
+    }
+
+    .book__img{
+        display: block;
+        margin: auto;
+    }
+
+    .book__description{
+        padding-bottom: 1.2em;
+    }
+
+    button{
+        width: 10em;
+        height: 3em;
+        font-size: 1em;
     }
 
     .footer__button{
-        margin: 0;
+        width: 12em;
+        font-size: 0.9em;
+    }
+
+}
+
+@media screen and (min-width: 480px){
+    .header__link{
+        font-size: 0.9em;
+    }
+
+    .title{
+        font-size: 2em;
+        margin: 3% 2%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .header__link{
+        font-size: 1em;
+    }
+
+    .book__details{
+        font-size: 1.5em;
+    }
+
+    .footer__text{
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .header__link{
+        font-size: 1.3em;
+    }
+
+    .title{
+        font-size: 2.5em;
+    }
+
+    .book{
+        margin: auto;
+        width: 75%; 
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: 7%;
     }
 }
